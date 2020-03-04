@@ -1,15 +1,11 @@
-# **Introduction**
+# **12章概要**
 
-Typed Arrays are a relatively recent addition to browsers, born out of the need to have an efficient way to handle 
-binary data in WebGL. A Typed Array is a slab of memory with a typed view into it, much like how arrays work in C.
-Because a Typed Array is backed by raw memory, the JavaScript Engine can pass the memory directly to native libraries
-without having to painstakingly convert the data to a native representation. And as a result, Typed Arrays perform
-a lot better.
+型付き配列は、比較的最近ブラウザに追加されたもので、WebGLでバイナリデータを処理する効率的な方法が必要なことから生まれました。型付き配列は、Cで配列がどのように機能するかのように、型付きビューが含まれるメモリのスラブです。
+型付き配列は生メモリに支えられているため、JavaScriptエンジンは、データをネイティブ表現に苦労して変換することなく、ネイティブライブラリにメモリを直接渡すことができます。その結果、型付き配列のパフォーマンスが大幅に向上しました。
 
-Typed Arrays Views act like single-type arrays to a segment of an ArrayBuffer. There are views for all the usual
-numeric types, with self-descriptive names like Float32Array, Float64Array, Int32Array and others. There is also
-a special View which has replaced the pixel array type in Canvas's ImageData: Uint8ClampedArray.
+型付き配列ビューは、ArrayBufferのセグメントに対して単一型配列のように機能します。
+Float32Array、Float64Array、Int32Arrayなどの自己記述的な名前を持つ、通常のすべての数値型のビューがあります。 CanvasのImageDataのピクセル配列タイプを置き換える特別なビュー、Uint8ClampedArrayもあります。
 
-DataView is the second type of view and it is meant for handling heterogeneous data. Instead of having an array-like API, 
-the DataView object provides you a get/set API to read and write arbitrary data types at arbitrary byte offsets. 
-DataView works great for reading and writing file headers and other such struct-like data.
+DataViewはビューの2番目のタイプであり、異種データを処理するためのものです。
+DataViewオブジェクトは、配列のようなAPIを使用する代わりに、任意のバイトオフセットで任意のデータ型を読み書きするためのget / set APIを提供します。
+DataViewは、ファイルヘッダーやその他の構造体のようなデータの読み書きに最適です。
